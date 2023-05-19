@@ -1,0 +1,59 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+
+<div class="row">
+    <div class="container pl-5">
+        <div class="col-md-6 m-auto mt-5">
+            <h2 class="text-center">Login</h2>
+
+            <form  action="/login" id="form" method="post">
+            
+
+            {{#if loginerr}}
+            <p class="error text-danger">{{loginerr}}</p>
+
+
+            {{/if}}
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Stud Id:</label>
+                    <input name="studid" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Student id">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-primary mt-3 ">Login</button></div>
+                
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+// just for the demos, avoids form submit
+{{!-- jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+}); --}}
+$( "#form" ).validate({
+  rules: {
+    studid: {
+      required: true,
+    },
+    
+    password:{
+        required:true
+    }
+
+  }
+ 
+});
+</script>

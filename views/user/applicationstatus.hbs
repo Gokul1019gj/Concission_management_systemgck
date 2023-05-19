@@ -1,0 +1,41 @@
+
+    <section>
+  <div class="container">
+    
+    <table border="2px solid black" class="table mt-5">
+      <thead >
+        <tr>
+         
+          <th scope="col">Stud Id</th>
+          <th scope="col">Application status for Consession</th>
+          {{!-- <th>Download</th> --}}
+          <th>Remark</th>
+         
+          
+          
+          
+
+        </tr>
+      </thead>
+      <tbody >
+        
+
+        <tr>
+             <td>{{stid}}</td>
+             
+          <td>{{response.clgaprove}}</td>
+          
+          
+          {{#if response.download}}
+        <td><a href="/virtualconcession"><img style="height: 30px;width:auto" src="images/download.png" alt=""></a></td>
+        {{/if}}
+         
+          <td>{{response.remarks}}</td>
+          </tr>
+        
+
+      </tbody>
+    </table>
+   
+  </div>
+</section>

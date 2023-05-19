@@ -1,0 +1,58 @@
+<section>
+  <div class="container">
+    <div class="row mt-5">
+
+     
+
+    </div>
+    <h1 class="text-center"><kbd>KSRTC ADMIN</kbd></h1>
+    <table border="2px solid black" class="table mt-5">
+      <thead >
+        <tr>
+          <th scope="col">Stud Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">DATE OF BIRTH</th>
+          <th scope="col">COLLEGE</th>
+          <th scope="col">DEPARTMENT</th>
+          <th scope="col">YEAR OF STUDYING</th>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Validity</th>
+          <th scope="col">Fair</th>
+          <th scope="col">Image</th>
+          <th scope="col">Signature</th>
+          <th scope="col">REJECTED DATE</th>
+
+        </tr>
+      </thead>
+      <tbody >
+        {{#each response}}
+        {{#eq this.formdata.ksrtcadminaprove 'r'}}
+       
+        <tr>
+
+          <td>{{this.stud}}</td>
+          <td>{{this.formdata.name}}</td>
+          <td>{{this.formdata.Address}}</td>
+          <td>{{this.formdata.dateofbirth}}</td>
+          <td>{{this.formdata.College}}</td>
+          <td>{{this.formdata.department}}</td>
+          <td>{{this.formdata.yearofstudying}}</td>
+          <td>{{this.formdata.From}}</td>
+          <td>{{this.formdata.To}}</td>
+          <td>{{this.formdata.month}}</td>
+          <td>{{this.formdata.Fair}}</td>
+          <td><img style="width: 50px; height: 50px;" src="/user-imagedata/{{this.stud}}pic.jpg" alt=""></td>
+          
+          <td><img style="width: 50px; height: 50px;" src="/user-imagedata/{{this.stud}}sig.jpg" alt=""></td>
+          <td>{{this.ksrtcrejecteddate}}</td>
+        </tr>
+        
+        {{/eq}}
+        {{/each}}
+
+      </tbody>
+    </table>
+  </div>
+</section>

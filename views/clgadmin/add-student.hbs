@@ -1,0 +1,19 @@
+<section>
+
+    <div class="container">
+        <form action="/clgadmin/add-student" method="post" enctype="multipart/form-data" >
+            <h2>ENTER STUDENTS DETAILS</h2>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Stud Id</label>
+    <input type="text" name="studid" class="form-control">
+
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <input hidden name="firstlogin" value="true" type="text">
+  <button onclick="return window.alert('student added')" type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+</section>

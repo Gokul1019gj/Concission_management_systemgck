@@ -1,0 +1,123 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+
+<section>
+    <div class="container ">
+        <div class="row mt-5">
+
+            <div class="col-md-6">
+                <h1 class="text-center">concession</h1>
+                <form id="myform" action="/preview-Form" method="post" enctype="multipart/form-data">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control left" name="name"><br>
+                    <label for="category">Address</label>
+                    <input name="Address" type="text" id="address"  class="form-control"><br>
+                    <label for="price">DATE OF BIRTH:</label>
+                    <input name="dateofbirth" type="date" id="birthday"  class="form-control "><br>
+                    <label for="description">Root:</label><br><br>
+                    <label for="description">From</label>
+                    <input  name="From" type="text" id="from" class="form-control"><br>
+                    <label for="description">To</label>
+                    <input name="To" type="text" id="to"  class="form-control"><br>
+                    <div class="form-group">
+                    <label for="">DEPARTMENT:</label>
+                    <select name="department" id="dep">
+                        <option value="" >Select</option>
+                        <option value="Cs">CS</option>
+                         <option value="Pca">PCA</option>
+                          <option value="Bc">BC</option>
+                           <option value="Bt">BT</option>
+                            <option value="Stat">STAT</option>
+                             <option value="Geo">GEO</option>
+                             <option value="Ic">IC</option>
+                    </select>
+                </div><br>
+                    <label for="description">YEAR OF STUDYING:</label>
+                    <input name="yrofstud" type="text" id="to"  class="form-control">
+                    <label for="description">Validity:</label><br><br>
+
+                    <div>
+                      <input name="month" style="margin-left: 13px;"  type="radio">&nbsp;
+                      <label style="    margin-top: 2px;" for="">1 MONTH</label><br>
+                      <input name="month" style="margin-left: 13px;"  type="radio">&nbsp;
+                      <label style="margin-top: 2px;" for="">3 MONTH</label>
+                    </div>
+                    <br>
+                    <label for="">Upload Signature:</label>
+                    <input  name="signature"  type="file" class="form-control" id="signature"><br>
+                    <label for="">Upload Photo:</label>
+                    <input name="photo" type="file" class="form-control"  id="photo"><br>
+                    <label for="">Ticket Fair:</label>
+                    <input name="Fair" type="text" id="fair"  class="form-control">
+                    <label for=""></label>
+
+                    
+                    <button type="submit" class=" btn btn-success mt-5">preview</button>
+                    
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+<script>
+    {{!-- jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+}); --}}
+$( "#myform" ).validate({
+  rules: {
+    name: {
+      required: true,
+      minlength: 3,
+      maxlength:20
+    },
+
+    Address:{
+      required: true
+      
+      
+    },
+    dateofbirth:{
+      required: true
+
+    },
+    From:{
+      required: true
+    },
+    To:{
+      required: true
+
+    },
+    department:{
+      required:true
+    },
+    yrofstud:{
+      required: true
+    },
+    month:{
+      required:true
+      
+    },
+    signature:{
+      required: true
+    },
+    photo:{
+      required: true
+    },
+    Fair:{
+      required: true
+    }
+
+  }
+ 
+});
+</script>

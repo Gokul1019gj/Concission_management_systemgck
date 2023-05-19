@@ -1,0 +1,39 @@
+<section style="border: 2px solid black;
+    margin-left: 224px;
+    margin-right: 224px;">
+
+      <h1 class="text-center"> <b> <u>COURSE CERTIFICATE</u></b> </h1>
+  
+      <h6 style="margin-left: 70%;margin-top: -48px;">Government College </h6>
+      <h6 style="  margin-left: 72%;">Kariavattom</h6>
+      
+  
+      <p style="margin-top: 118px;font-size: 24px;" class="text-center">certified that <label for=""> <u>{{response.dataa.name}}</u> </label> &nbsp; is a <br> <label for=""> <u>{{response.dataa.semester}}</u> </label> semester Bsc <label for=""> <u>{{response.dataa.department}}</u></label> <br>
+      student of this college during the academic year <label for=""><u>{{response.dataa.acadamicyear}}</u> </label><br>
+      
+      
+                              </p>
+
+      
+      
+      <p style="    margin-left: 80%;"> Signature Of Authority</p>
+
+<form action="/clgadmin/approve_ccform" method="post">
+                    <input hidden name="id" type="text" value="{{response._id}}">
+                    <div style="margin-left: 27%;" class="mb-3 text-danger">
+                <label  class="form-label" for="">Remark:</label><br>
+                <textarea name="remark" id="remark" cols="30" rows="10"></textarea>
+              </div>
+           
+
+                
+  </section>
+
+   <div id="bt" style="margin-left:45% ;">
+              <button  onclick="return window.alert('approved')"  type="submit" class="btn btn-primary mt-5">Approve</button>
+              <button onclick=" return window.confirm('Do you want to reject')" type="submit" formaction="/clgadmin/rejectccform" href="" class="btn btn-danger mt-5">Reject</button>
+            
+            </div>
+ </form>
+    
+    

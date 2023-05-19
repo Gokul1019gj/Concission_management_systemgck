@@ -1,0 +1,58 @@
+<section>
+  <div class="container">
+    <div class="row mt-5">
+
+      
+
+    </div>
+    <h1 class="text-center"><b> <u>COMPLAINT BOX</u> </b> </h1>
+    <table border="2px solid black" class="table mt-5">
+      <thead >
+        <tr>
+          
+          <th scope="col">Stud Id</th>
+          <th scope="col">Name</th>
+          
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Complaint</th>
+          
+          
+          
+          
+
+        </tr>
+      </thead>
+      <tbody >
+        {{#each response}}
+        
+        <tr>
+          
+          <td>{{this.id}}</td>
+          <td>{{this.details.name}}</td>
+        
+         <td>{{this.details.emailaddress}}</td>
+         <td>{{this.details.phone}}</td>
+          <td>{{this.details.complaint}}</td>
+          <td><a class="btn btn-info" href="mailto:{{this.details.emailaddress}}">Respond</a></td>
+          <td><a onclick="return window.confirm('do you want to delete')" class="btn btn-danger" href="/clgadmin/dltcomplaint/{{this.id}}">Delete</a></td>
+         
+   
+          
+          
+          
+            
+            
+            
+        </tr>
+    
+        {{/each}}
+
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+ 

@@ -1,0 +1,59 @@
+<section>
+  <div class="container">
+    <div class="row mt-5">
+
+      
+
+    </div>
+    <h1 class="text-center"><b> <u>COURSE CERTIFICATE FORMS</u> </b> </h1>
+    <table border="2px solid black" class="table mt-5">
+      <thead >
+        <tr>
+          
+          <th scope="col">Stud Id</th>
+          <th scope="col">Name</th>
+          
+          <th scope="col">DEPARTMENT</th>
+          <th scope="col">SEMESTER</th>
+          <th scope="col">ACCADEMIC YEAR</th>
+          
+          
+
+        </tr>
+      </thead>
+      <tbody >
+        {{#each response}}
+        {{#eq this.dataa.ccaprove 'w'}}
+        <tr>
+          
+          <td>{{this.id}}</td>
+          <td>{{this.dataa.name}}</td>
+         <td>{{this.dataa.department}}</td>
+         <td>{{this.dataa.semester}}</td>
+         <td>{{this.dataa.acadamicyear}}</td>
+          
+         
+   
+          
+          
+          
+            
+            
+            <td>
+            <a onclick="tick()" href="/clgadmin/previewcc/{{this._id}}" class="btn btn-success">Preview</a>
+            
+            
+            
+          </td>
+        </tr>
+        {{/eq}}
+        {{/each}}
+
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+ 

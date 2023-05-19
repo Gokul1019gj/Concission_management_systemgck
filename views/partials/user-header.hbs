@@ -1,0 +1,81 @@
+<header>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                {{#if user}}
+                <a class="navbar-brand" href="/home">Student Panel</a>
+                {{else}}
+                <a class="navbar-brand" href="#">Student Panel</a>
+                <a style="margin-left: 82rem;" class="navbar-brand" href="/clgadmin/main"><img style="width: 24px;" src="\images\home-button.png" alt=""></a>
+                
+                {{/if}}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                       {{#if user}}
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/coursecertificate">Apply For Course Certificate</a>
+                        </li>
+
+
+
+                        <li>
+
+                        <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            APPLICATION STATUS
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" style="">
+                            
+                            <li><a class="dropdown-item active" href="/coursecertificatestatus">Course certificate application status</a></li>
+                           
+                            <li><a class="dropdown-item active" href="/concessionstatus">Concession application status</a></li>
+                          
+
+                            
+
+
+                        </ul>
+                     </div>
+                   
+                        
+                       
+                       
+                    </ul>
+
+                   <div>
+                    <a href="/regstrcomplaint">  <abbr title="Register complaint"><img  style="    margin-right: 18px;" src="\images\complaint-48.png" alt=""></abbr></a>
+                   </div>
+                    <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{!-- {{#if user}}
+                    {{user.name}}
+                    {{else}}
+                    Account
+                    {{/if}} --}}
+                    student
+                </button>
+                
+                <ul class="dropdown-menu dropdown-menu-dark" style="">
+                    
+                    <li><a class="dropdown-item active" href="/logout">Logout</a></li>
+                    
+
+
+                </ul>
+            </div>
+
+             {{/if}}
+                </div>
+            </div>
+        </nav>
+       
+    </header>

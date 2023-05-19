@@ -1,0 +1,142 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            {{#if logo}}
+            <a class="navbar-brand text-info" href=""><img style="height: 72px;
+    width: 98px;" src="\images\identity-removebg-preview.png" alt="">
+              </a>
+              {{else}}
+              <a class="navbar-brand text-info" href="/clgadmin/clghome"><b>COLLEGE ADMIN</b>
+              </a>
+              {{/if}}
+              {{#if home}}
+              <a style="margin-left: 82rem;" class="navbar-brand" href="/clgadmin/main"><img style="width: 24px;" src="\images\home-button.png" alt=""></a>
+              {{/if}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                {{#if login}}
+
+                    <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/student">Student</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/ksrtcadmin/ksrtcadminuser">Ksrtc</a>
+                        </li>
+
+                        
+                        {{/if}}
+                    {{#if user}}
+
+                    
+                    <li>
+
+                        <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                           COURSE CERTIFICATE APPLICATIONS 
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" style="">
+                            
+                            <li><a class="dropdown-item active" href="/clgadmin/coursecertificateview">Waiting course certificate application</a></li>
+                           
+                            <li><a class="dropdown-item active" href="/clgadmin/approvedccview">Approved course certificate application</a></li>
+                             <li><a class="dropdown-item active" href="/clgadmin/rejectedccview">Rejected course certificate application</a></li>
+
+                            
+
+
+                        </ul>
+                     </div>
+                   </li>
+
+
+
+                   <li>
+
+                        <div style="margin-left: 20px;" class="dropdown ">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                           CONCESSION CERTIFICATE APPLICATIONS 
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" style="">
+                            
+                            <li><a class="dropdown-item active" href="/clgadmin/viewapplications">Waiting concession certificate application</a></li>
+                           
+                            <li><a class="dropdown-item active" href="/clgadmin/approvedconcessionappli">Approved concession certificate application</a></li>
+                             <li><a class="dropdown-item active" href="/clgadmin/rejectedconcession">Rejected concession certificate application</a></li>
+
+                            
+
+
+                        </ul>
+                     </div>
+
+
+                    
+                   </li>
+
+                   <li>
+
+                     <div style="margin-left: 20px;" class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                           KSRTC STATUS 
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" style="">
+                            
+                            <li><a class="dropdown-item active" href="/clgadmin/ksrtcaproved">ksrtc aproved</a></li>
+                           
+                            <li><a class="dropdown-item active" href="/clgadmin/ksrtcrejected">ksrtc rejected</a></li>
+                            
+                            
+
+
+                        </ul>
+                     </div>
+                   </li>
+                   
+
+                   
+                  {{/if}}
+
+            </ul>
+
+{{#if box}}
+            <div style="margin-right: 1rem;"><abbr title="COMPLAINT BOX"><a href="/clgadmin/viewcomplaint"><img style="width: 46px; height: 46px;" src="\images\complaintclg.png" alt=""></a></abbr></div>
+{{/if}}
+            {{#if bt}}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{!-- {{#if user}}
+                    {{user.name}}
+                    {{else}}
+                    Account
+                    {{/if}} --}}
+                    College login
+                </button>
+                {{/if}}
+                <ul class="dropdown-menu dropdown-menu-dark" style="">
+                    {{#if user}}
+                    <li><a class="dropdown-item active" href="/clgadmin/logout">Logout</a></li>
+                    {{else}}
+                    <li><a class="dropdown-item active" href="clgadmin/login">Login</a></li>
+
+                    {{/if}}
+
+
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>

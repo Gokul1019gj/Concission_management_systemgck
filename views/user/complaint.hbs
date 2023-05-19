@@ -1,0 +1,74 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+
+
+
+<section>
+
+    <h1 class="text-center">COMPLAINT FORM</h1>
+    <div style="margin-left: 28rem;margin-top: 9rem;" class="container mt-5">
+            <div class="row mt-5">
+    
+                <div class="col-md-6">
+                  <form id="myform" action="/registercomplaint" method="post" enctype="multipart/form-data">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control left" name="name"><br>
+                    <label for="category">Email Address</label>
+                    <input name="emailaddress" type="email" id="address"  class="form-control"><br>
+                    <label for="category">Phone</label>
+                    <input name="phone" type="number" id="address"  class="form-control"><br>
+                    <label for="category">Complaint</label><br>
+                    <textarea name="complaint" id="" cols="30" rows="10"></textarea><br>
+
+                    
+                    <button onclick="return window.alert('submitted')" type="submit" class=" btn btn-success mt-5">File Complaint</button>
+                    
+
+
+
+                </form>
+    
+                </div>
+                 </div>
+                  </div>
+    
+    </section>
+
+    <script>
+    {{!-- jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+}); --}}
+$( "#myform" ).validate({
+  rules: {
+    name: {
+      required: true,
+      minlength: 3,
+      maxlength:20
+    },
+
+    emailaddress:{
+      required: true
+      
+      
+    },
+    phone:{
+      required: true,
+      minlength:10,
+      maxlength:10,
+      digitsonly:true
+
+    },
+    complaint:{
+      required: true,
+      minlength:5
+
+    }
+
+  }
+ 
+});
+</script>

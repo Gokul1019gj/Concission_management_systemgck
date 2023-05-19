@@ -1,0 +1,87 @@
+
+    <section  style="border:3px solid black ;margin-left:9%;margin-right:9%;">
+
+
+        <form action="/submit-Form" method="post"  enctype="multipart/form-data">
+            <img class="mt-5" style="height:50px ; width:50px;margin-left: 50%;" src="\images\toppng.com-ksrtc-logo-200x199.png" alt="">
+            <p style="margin-left:37% ;"><b>KERALA STATE ROAD TRANSPORT CORPORATION</b> </p>
+            <p style="margin-left:41%;"><b>APPICATION FORM FOR CONCESSION</b> </p>
+            <fieldset >
+                
+            <div style="margin-top: 8%; margin-left: 27%;" class="mb-3">
+              <label name="" for="exampleInputEmail1" class="form-label">NAME:&nbsp;</label>
+              
+              <input name="name" value="{{details.name}}" style="border:none ;pointer-events: none;margin-left:13%;" type="text">
+                
+              
+            </div>
+            <div style="margin-left: 27%;" class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">ADDRESS:</label>
+              <input name="Address" value="{{details.Address}}"  style="margin-left:13%;border:none ;pointer-events: none;width:100%;" type="text">
+              
+            </div>
+            <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">DATE OF BIRTH:</label>
+                <input name="dateofbirth" value="{{details.dateofbirth}}"  style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">COLLEGE:</label>
+                <input name="College" value="GOVERNMENT COLLEGE KARIAVATTOM"  style="margin-left:13%;border:none ;pointer-events: none;width:100%" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">DEPARTMENT:</label>
+                <input name="department" value="{{details.department}}"  style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">YEAR OF STUDYING :</label>
+                <input name="yearofstudying" value="{{details.yrofstud}}"  style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">ROOT:</label><br>
+                <label for="exampleInputPassword1" class="form-label">FROM:</label>
+                <input name="From" value="{{details.From}}"  style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">TO:</label>
+                <input name="To" value="{{details.To}}" style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">VALIDITY:</label>
+                <input name="month" value="{{details.month}}" style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+                
+              </div>
+              <div style="margin-left: 27%;" class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">TICKET FAIR:</label>
+                <input name="Fair" value="{{details.Fair}}" style="margin-left:13%;border:none ;pointer-events: none;" type="text">
+  
+              </div>
+            <div id="bt" style="margin-left:50% ;">
+              <button onclick="return window.alert('Submitted')"  type="submit" class="btn btn-primary mt-5">Submit</button>
+            <button onclick="window.print();return false" type="submit" class="btn btn-primary mt-5">Print</button>
+            </div>
+            
+        </fieldset>
+         <img style="margin-left: 74%;
+    margin-top: -101%;width: 100px;height:auto;
+" src="/user-imagedata/{{id}}pic.jpg" alt="dfhdfhdh">
+
+         <img style="margin-left: 74%;width: 100px;height:auto;
+    margin-top: -25%;"  src="/user-imagedata/{{id}}sig.jpg" alt="dfhdfhdh">
+    <div style="margin-top: -11%;"><p style="margin-left: 74%;" for="">Signature of applicant</p></div>
+         
+         <input type="text" hidden for="" name="clgadminaprove" value="w">
+                    <input type="text" hidden for="" name="ksrtcadminaprove" value="w">
+                    <input type="text" hidden for="" name="statuss" value="">
+          </form>
+       
+
+</section>
+
+
+    
